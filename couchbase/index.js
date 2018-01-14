@@ -78,4 +78,21 @@ module.exports = {
       })
     })
   },
+  /**
+   * remove document
+   * @param {string} key
+   * @returns
+   */
+  RemoveDocument(key) {
+    return new Promise((resolve, reject) => {
+      cbConnection.openBucket().then((bucket) => {
+        bucket.remove(key, (err, result) => {
+          bucket.disconnect()
+          if (err) return reject(err)
+
+          return resolve(result)
+        })
+      })
+    })
+  },
 }
