@@ -21,6 +21,7 @@ module.exports = {
   openBucket() {
     return new Promise((resolve, reject) => {
       const cluster = getCluster()
+      console.log(`Connecting couchbase using url=${couchbaseUrl},bucket=${bucketName},password=${bucketPassword}`)
       const bucket = cluster.openBucket(bucketName, bucketPassword, (err) => {
         if (err) { reject(err) }
       })
