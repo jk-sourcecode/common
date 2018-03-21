@@ -1,6 +1,6 @@
 {
   "name": "common",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "common functionality",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.5.1",
+    "bunyan": "^1.8.12",
     "couchbase": "^2.4.3",
     "dotenv": "^4.0.0",
     "lodash": "^4.17.4"
